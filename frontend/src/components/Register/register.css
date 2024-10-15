@@ -1,0 +1,41 @@
+.FormMainSec{
+    width:30%;
+    margin:5rem auto 0rem;
+}
+
+#FormMainTittle{
+    text-align:center;
+    font-size:3.5rem;
+    color:black;
+    font-weight:bolder;
+}
+
+#FormSubtittle{
+    text-align:center;
+    font-size:1.8rem;
+    margin-top:0.3rem;
+}
+
+.ActualFormDiv form{
+    display: flex;
+    flex-direction:column;
+    row-gap:1rem;
+    margin-top:2rem;
+}
+.ActualFormDiv form input{
+    width:100%;
+    padding:0.5rem;
+    border:none;
+    border-radius:0.3rem;
+    box-shadow:0rem 0rem 0.5rem rgb(224, 224, 224);
+}
+
+#FormSubmitBtn{
+    background:black;
+    border:none;
+    cursor:pointer;
+    color:white;
+    padding:0.5rem 0rem 0.5rem 0rem;
+    margin-top:0.8rem;
+    border-radius:0.3rem;
+}
