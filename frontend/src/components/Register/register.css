@@ -1,5 +1,5 @@
 .FormMainSec{
-    width:30%;
+    width:35rem;
     margin:5rem auto 0rem;
 }
 
@@ -38,4 +38,27 @@
     padding:0.5rem 0rem 0.5rem 0rem;
     margin-top:0.8rem;
     border-radius:0.3rem;
+}
+
+
+
+@media screen and (max-width:920px){
+    .FormMainSec{
+        width:30rem;
+        margin:3rem auto 0rem;
+    }
+    
+}
+
+@media screen and (max-width:575px){
+    .FormMainSec{
+        width:20rem;
+        margin:3rem auto 0rem;
+    }
+}
+
+@media screen and (max-width:363px){
+    .FormMainSec{
+        width:98%;
+    }
 }

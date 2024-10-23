@@ -4,6 +4,7 @@ import { Login } from "./pages/login";
 import { Register } from "./pages/register";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Footer } from "./components/Footer/Footer";
+import './index.css'
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
               <Route path="/register" element={<Register />} />
             </Routes>
           </div>
-          <div style={{marginTop:"3rem"}}>
+          <div className="FooterAppDiv">
             <Footer />
           </div>
         </div>

@@ -3,12 +3,47 @@
   src: url(../src/assets/Fonts/chamberi-super-display-light-italic.otf);
 }
 
+@font-face {
+  font-family: Helvetica;
+  src: url(../src/assets/Fonts/Helvetica.ttf);
+}
+
+@font-face {
+  font-family: garamond;
+  src: url(../src/assets/Fonts/Garamond\ Regular.ttf);
+}
+
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
 }
 
+.TittleFonts{
+  font-family: Helvetica;
+  font-weight:bold;
+}
+
+.MoreTextFont{
+  font-family: garamond;
+  font-weight:bold;
+  font-size:1.2rem;
+}
+
 .logo{
   font-family: logoI;
+}
+
+
+/* START OF APP.JSX */
+
+.FooterAppDiv{
+  margin-top:2rem;
+}
+
+
+@media screen and (max-width:784px){
+  .FooterAppDiv{
+    margin-top:1.5rem;
+  }
 }

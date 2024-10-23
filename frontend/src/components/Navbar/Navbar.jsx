@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faUser} from '@fortawesome/free-solid-svg-icons'
 import "./navbar.css";
 
 export function Navbar() {
@@ -18,16 +20,13 @@ export function Navbar() {
           ) : (
             <ul className="LoginRegisterOnly">
               <li>
-                <Link to="/register">Sign In</Link>
+                <Link to="/register" className='MoreTextFont' ><FontAwesomeIcon icon={faUser} />  Sign In</Link>
               </li>
               <li>
-                <Link to="/login" id="SignUpBtn">Sign Up</Link>
+                <Link to="/login" id="SignUpBtn" className='MoreTextFont' >Sign Up</Link>
               </li>
             </ul>
           )}
-        </div>
-        <div className="MenuDiv">
-          <p>Menu</p>
         </div>
       </nav>
     </header>
