@@ -1,16 +1,35 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState ,useEffect} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faRightToBracket} from '@fortawesome/free-solid-svg-icons'
 import '../Register/register.css'
+import { toast } from 'react-toastify';
+import { useSelector,useDispatch } from 'react-redux';
+import { reset,login } from '../../features/Auth/AuthSlice';
+import { useNavigate } from 'react-router-dom';
+import { Spinner } from '../Spinner/Spinner';
 
 export function LoginForm() {
+
+  const {user,isSuccess,isLoading,isError,message,}=useSelector((state)=>state.auth)
+  const navigate=useNavigate()
+  const dispatch=useDispatch()
     const [formData, setFormData] = useState({
       email: "",
       password: "",
     });
   
-    const { name, email, password, password2 } = formData;
+    const { email, password } = formData;
+
+    useEffect(()=>{
+      if(isError){
+        toast.error(message)
+      }
+
+      if(isSuccess){
+        navigate("/dashboard")
+      }
+    },[user,isSuccess,isError,dispatch,navigate])
   
     const OnChange=(e)=>{
       setFormData((prev)=> ({
@@ -21,6 +40,19 @@ export function LoginForm() {
   
     const HandleSubmitForm=(e)=>{
       e.preventDefault()
+      const userData={
+        email,
+        password
+      }
+
+      dispatch(login(userData))
+      setFormData({
+        email: "",
+        password: "",
+      })
+    }
+    if(isLoading){
+      return <Spinner/>
     }
     return (
       <section className="FormMainSec">

@@ -17,8 +17,15 @@ app.use("/api/goals",require("./router/goalsrouter"))
 app.use("/api/users",require("./router/usersrouter"))
 
 
+//handling unknown route
+app.all("*",(req,res,next)=>{
+    throw new Error("Invalid url!!")
+})
+
 //overwritting defult error handling
 app.use(errorHandler)
+
+
 
 app.listen(PORT,()=>{
     console.log(`Server listening to port ${PORT}.....`)

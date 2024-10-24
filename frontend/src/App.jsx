@@ -4,7 +4,11 @@ import { Login } from "./pages/login";
 import { Register } from "./pages/register";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Footer } from "./components/Footer/Footer";
+import { DynamicDashboard } from "./components/Dashboard/Dashboard";
 import './index.css'
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
+
 
 function App() {
   return (
@@ -22,6 +26,7 @@ function App() {
             <Navbar />
             <Routes>
               <Route path="/" element={<Dashboard />} />
+              <Route path='/dashboard' element={<DynamicDashboard/>} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
             </Routes>
@@ -31,6 +36,7 @@ function App() {
           </div>
         </div>
       </Router>
+      <ToastContainer/>
     </>
   );
 }
