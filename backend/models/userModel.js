@@ -16,7 +16,7 @@ const userSchema=mongoose.Schema({
     },
 },
 {
-    timestamps:true
+    timestamps:true //creatat and updateat fields will be automatically added to the document
 })
 
 

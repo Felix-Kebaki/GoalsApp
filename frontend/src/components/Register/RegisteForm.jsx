@@ -27,17 +27,7 @@ export function RegisteForm() {
 
   const { name, email, password, password2 } = formData;
 
-  useEffect(() => {
-    if (isError) {
-      toast.error(message);
-    }
 
-    if (isSuccess || user) {
-      navigate("/dashboard");
-    }
-
-    dispatch(reset());
-  }, [user, isError, isSuccess, message, navigate, dispatch]);
 
   const OnChange = (e) => {
     setFormData((prev) => ({
@@ -66,6 +56,18 @@ export function RegisteForm() {
       });
     }
   };
+
+  useEffect(() => {
+    if (isError) {
+      toast.error(message);
+    }
+
+    if (isSuccess || user) {
+      navigate("/dashboard");
+    }
+
+    dispatch(reset());
+  }, [user, isError, isSuccess, message, navigate, dispatch]);
 
   if (isLoading) {
     return <Spinner />;
