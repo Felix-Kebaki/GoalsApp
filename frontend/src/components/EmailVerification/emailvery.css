@@ -1,0 +1,40 @@
+.VerifyEmailMainSec{
+    width:100%;
+    height:100dvh;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:white;
+}
+
+.VerifyEmailMainDiv{
+    width:30rem;
+   background: #3EB489;
+   padding:3.5rem;
+   border-radius:0.3rem;
+}
+
+#VerifyTitle{
+    font-size: 1.6rem;
+    text-align:center;
+}
+
+#VerifySubTitle{
+    text-align: center;
+    font-size: 1rem;
+}
+
+.VerifyInput{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-top:0.6rem;
+}
+
+.VerifyInput input{
+    width:15%;
+    height: 3rem;
+    border-radius:0.3rem;
+    border:none;
+}

@@ -1,6 +1,31 @@
 .FormMainSec{
-    width:35rem;
-    margin:5rem auto 0rem;
+    width:100%;
+    height:100dvh;
+    position:relative;
+    overflow: hidden;
+}
+
+.BackgroundImageDiv{
+    position:absolute;
+    top: 0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+.BackgroundImageDiv img{
+    width:100%;
+    height:100%;
+}
+
+.FormMainDiv{
+    width:28rem;
+    position:absolute;
+    bottom: 3rem;
+    right:3rem;
+    background-color: white;
+    padding: 3.5rem;
+    border-radius:0.4rem;
 }
 
 #FormMainTittle{
@@ -31,34 +56,72 @@
 }
 
 #FormSubmitBtn{
-    background:black;
+    background:#3EB489;
     border:none;
     cursor:pointer;
     color:white;
     padding:0.5rem 0rem 0.5rem 0rem;
-    margin-top:0.8rem;
+    margin-top:0.4rem;
     border-radius:0.3rem;
 }
 
+.SwitchingFormsDiv p{
+    text-align:center;
+    font-size:1rem;
+}
+
+.SwitchingFormsDiv p a{
+    color:#3EB489;
+    font-size:1.1rem;
+    text-decoration: none;
+}
 
 
-@media screen and (max-width:920px){
+
+@media screen and (max-width:1278px){
+    .FormMainDiv{
+        width: 25rem;
+        bottom: 2rem;
+        right:2rem;
+        padding:2rem;
+    }
+}
+
+@media screen and (max-width:550px){
     .FormMainSec{
-        width:30rem;
-        margin:3rem auto 0rem;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    .FormMainDiv{
+        position:static;
+        z-index: 1;
+    }
+    #FormMainTittle{
+        font-size:3rem;
     }
     
-}
-
-@media screen and (max-width:575px){
-    .FormMainSec{
-        width:20rem;
-        margin:3rem auto 0rem;
+    #FormSubtittle{
+        font-size:1.5rem;
     }
 }
 
-@media screen and (max-width:363px){
-    .FormMainSec{
-        width:98%;
+@media screen and (max-width:412px){
+    .FormMainDiv{
+        width: 98%;
+        padding:1rem;
+    }
+}
+
+@media screen and (max-width:275px){
+    .FormMainDiv{
+        padding:0.5rem;
+    }
+    #FormMainTittle{
+        font-size:2.5rem;
+    }
+    
+    #FormSubtittle{
+        font-size:1.3rem;
     }
 }

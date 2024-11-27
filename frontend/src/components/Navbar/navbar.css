@@ -41,8 +41,10 @@ nav {
 }
 
 #SignUpBtn {
-  background: #36454f;
-  color: white;
+  background: transparent;
+  /* border:0.15rem #FFBF34 solid; */
+  background:#FFBF34;
+  color: black;
   border-radius: 0.2rem;
 }
 

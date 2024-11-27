@@ -11,13 +11,14 @@ const getGoals = asyncHandler(async (req, res) => {
 
 //POST
 const PostGoal = asyncHandler(async (req, res) => {
+  console.log(req.user)
   if (!req.body.text) {
     res.status(400);
     throw new Error("Please add a text!!");
   }
   const goals = await Goal.create({
     text: req.body.text,
-    user:req.user.id
+    user:req.user._id
   });
   res.status(200).json(goals);
 });

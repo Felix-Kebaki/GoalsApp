@@ -8,15 +8,16 @@ const app=express();
 const PORT=process.env.PORT || 5000;
 
 
-app.use(cors({
-    origin:"http://localhost:5173",
-    methods:['POST','GET','DELETE','PUT'],
-    allowedHeaders:['Content-Type']
-  }))
+app.use(cors())
+// {
+//     origin:"http://localhost:5173",
+//     methods:['POST','GET','DELETE','PUT'],
+//     allowedHeaders:['Content-Type']
+//   }
 
 //middleware to use req.body functionality
 app.use(express.json())
-app.use(express.urlencoded({extended:false}))
+// app.use(express.urlencoded({extended:false}))
 
 
 //for getting the route

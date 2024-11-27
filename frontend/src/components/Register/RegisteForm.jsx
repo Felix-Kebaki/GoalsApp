@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { Spinner } from "../Spinner/Spinner";
+import BackgroundImage from '../../assets/images/registerBg.png'
 import "./register.css";
 
 //backend connectivity imports
 import { toast } from "react-toastify";
 import { useSelector, useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { register, reset } from "../../features/Auth/AuthSlice";
 
 export function RegisteForm() {
@@ -74,10 +75,14 @@ export function RegisteForm() {
   }
   return (
     <section className="FormMainSec">
+    <div className="BackgroundImageDiv">
+      <img src={BackgroundImage} alt="" />
+    </div>
+      <div className="FormMainDiv">
       <p id="FormMainTittle">
         <FontAwesomeIcon icon={faUser} /> Register
       </p>
-      <p id="FormSubtittle">Please create an account</p>
+      <p id="FormSubtittle">Create an account</p>
       <div className="ActualFormDiv">
         <form onSubmit={HandleSubmitForm}>
           <input
@@ -120,7 +125,11 @@ export function RegisteForm() {
           <button type="submit" id="FormSubmitBtn">
             Submit
           </button>
+          <div className="SwitchingFormsDiv">
+            <p>Already have an account? <Link to="/login">login</Link></p>
+          </div>
         </form>
+      </div>
       </div>
     </section>
   );

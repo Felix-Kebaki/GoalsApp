@@ -1,5 +1,5 @@
 import React from "react";
-import HeroImage from "../../assets/images/HeroImage.png";
+import HeroImage from "../../assets/images/HeroImage1.png";
 import HeroImage2 from "../../assets/images/Image2Hero.jpg";
 import Icon1 from "../../assets/images/Checkbox.svg";
 import Icon2 from "../../assets/images/Stairs-Up.svg";
@@ -7,7 +7,10 @@ import Icon3 from "../../assets/images/Target.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHourglassHalf } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
+import { Navbar } from "../Navbar/Navbar";
+import { Footer } from "../Footer/Footer";
 import "./dDashboard.css";
+
 
 export function DDashboard() {
   const navigate = useNavigate();
@@ -17,6 +20,8 @@ export function DDashboard() {
   };
   return (
     <section className="DashboardMainSec">
+      <div>
+      <Navbar/>
       <div className="DashboardMainDiv">
         <div className="HeroAtDashMainDIv">
           <img src={HeroImage} alt="" />
@@ -68,6 +73,10 @@ export function DDashboard() {
             </div>
           </div>
         </div>
+      </div>
+      </div>
+      <div className="FooterPositionDiv">
+      <Footer/>
       </div>
     </section>
   );

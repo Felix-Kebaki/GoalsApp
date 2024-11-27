@@ -13,9 +13,9 @@ const Protect=asyncHandler(async(req,res,next)=>{
 
             //verify token
             const decoded=jwt.verify(token,process.env.JWT_SECRET)
-
+            
             //get user from token
-            req.user=await User.findById(decoded.id).select("-password")
+            req.user=await User.findById(decoded.getId).select("-password")
             //req.user shall be used in protected routes and it wont have password as it is excluded 
             
             next()
